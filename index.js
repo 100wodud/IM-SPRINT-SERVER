@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: ['*'],
+    origin: ['http://practice-shortly-express-deploy.s3-website.ap-northeast-2.amazonaws.com'],
     methods: ['GET', 'POST'],
     credentials: true,
   })
