@@ -1,11 +1,26 @@
+require("dotenv").config();
+
 module.exports = {
-  development: {
-    username: 'root',
-    password: '454536',
-    database: 'shortly',
-    host: 'localhost',
-    dialect: 'mysql',
-    logging: false
+  "development": {
+    "username": process.env.DATABASE_USERNAME,
+    "password": process.env.DATABASE_PASSWORD,
+    "database": process.env.DATABASE_NAME,
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": process.env.DATABASE_USERNAME,
+    "password": process.env.DATABASE_PASSWORD,
+    "database": process.env.DATABASE_NAME,
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": process.env.DATABASE_USERNAME,
+    "password": process.env.DATABASE_PASSWORD,
+    "database": process.env.DATABASE_NAME,
+    "host": "localhost",
+    "dialect": "mysql"
   }
-};
-//export DATABASE_SPRINT_PASSWORD=454536
+}
+
